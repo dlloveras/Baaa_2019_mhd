@@ -1,0 +1,14 @@
+ABSTRACT para AAA2019 - Viedma
+
+Charla contribución
+Author: D.G. Lloveras(1), C. Mac Cormack(1), A.M. Vásquez(1), N. Sachdeva(2), W. Manchester IV(2), B. Van der Holst(2), R.A. Frazin(2).
+
+(1) IAFE (UBA-CONICET), Ciudad Autonoma de Buenos Aires, Argentina.
+(2) CLaSP (Univ. of Michigan), Ann Arbor - Michigan, EEUU.
+
+Titulo: Estudio tomográfico de validación para el modelo MHD AWSoM en la baja corona solar.
+
+Los modelos magnetohidrodinámicos (MHD) tridimenensionales (3D) son necesarios para predecir el clima espacial y para ello primero deben ser validados. Con esto último cono fin, la tomografía de medida de emisión diferencial (DEMT) provee resultados 3D de densidad y temperatura electrónica en la baja corona (1.0-1.25 Rsun). En combinación con modelos de campo magnéticos coronales, se lleva a cabo un análisis comparativo termodinámico a lo largo de las líneas de campo, como ser flujo de energía de entrada, densidad y temperatura electrónica. De esta forma el análisis utilizando DEMT resulta útl para validar y mejorar modelos MHD. En el presente trabajo realizamos una validación DEMT de la versión mas reciente del Alfvén Wave Solar Model (AWSoM) del Space Weather Modeling Framework (SWMF). Se seleccionó como objeto de análisis una rotación de carrington del último mínimo solar y otra en la fase de declinación del actual ciclo 24. Discutimos las diferencias observadas ente el modelo y los productos tomográficos y así también como la necesidad de mejorar el modelo AWSoM.
+
+
+
