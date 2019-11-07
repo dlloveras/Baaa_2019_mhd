@@ -195,17 +195,20 @@ Predecir eventos de clima espacial y sus efectos geomagnéticos requieren modelo
 
 En el presente trabajo nos focalizaremos en el modelo MHD coronal y de viento solar  Alfvén Wave Solar atmosphere Model (AWSoM) que forma parte del space weather Modeling framework (SWMF) \citet{Toth_2012}. El modelo utiliza calentamiento por ondas de Alfvén para proveer un modelo físico descriptivo 3D auto consistente de calentamiento coronal y aceleración de viento solar \citet{sokolov_2013}  \citet{vander_2014}.
 
-*validaciones anteriores de awsom
+A medida que el modelo adopta nuevas mejoras es necesario contrastar los resultados con observaciones. En una reciente publicación \citet{sachdeva_2019} se llevó a cabo una validación de la última versión del modelo para la rotación de Carrington CR2208 y CR2209 con datos \rm{in situ} de ACE, Wind, SDO/AIA, Ulysses, SOHO/LASCO, IPS y OMNI. Los datos de AIA fueron procesados con la técnica tomográfica de \rm{medida de emisión diferencial local} (DEMT) \citep{frazin_2009} la cual permite obtener una distribución 3D de densidad y temperaturas electronicas dentro del rango 1.0 - 1.25${\rm R_\odot}$. Llevaron a cabo comparaciones globales calculando la diferencia relativa pixel a pixel $RD = \frac{X_{AWSoM}}{X_{DEMT}}-1$ a alturas constantes tanto para para $N_e$ como para $T_e$ y se mostró que el modelo es capaz de reproducir las observaciones dentro de un $\sim 20-30\%$. 
 
-*propuesta validacion con demt  trazado
+Debido a que la corona es gobernada por el campo magnético, resulta de particular interés analizar  la termodinámica de líneas de campo asociadas a distintas estructuras magnéticas (Streamer, Agujero coronal, etc.). Con esta idea en mente presentamos en este trabajo el primer esfuerzo de validación del modelo AWSoM en la baja corona comparando la termodinámica con un modelo semi empírico (DEMT) en distintas estructuras magnéticas. Para esto se seleccionó la rotación CR2082 correspondiente al mínimo de actividad solar del 2009 y una rotación de la fase de  declinacion actual CR2208 (septiembre 2018).
 
 
 \section{Método}
 
-El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010} como condiciones de contorno en la fotósfera y permite obtener una estructura 3D de parámetros físicos como ser densidad $N_e$ y temperatura electrónica $T_e$ entre otros parámetros físicos.
+El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010} como condiciones de contorno en la fotósfera y permite obtener una estructura 3D de parámetros físicos (densidad y temperatura electrónica entre otros) eentre 1.0${\rm R_\odot}$ y 1 UA.
+
+Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes EUV cubriendo media rotación solar permitiendo reconstruir la emisividad en forma 3D en la baja corona. Combinando la emisividad de todas las bandas del telescopio se obtiene la \rm{medida de emisión diferencial local} (LDEM). Esta medida es una descripcion cualitativa de la distrubución térmica del plasma en cada celda de la grilla 3D.
 
 
-
+*explicar celdas negras
+*explicar mapoc
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -213,8 +216,6 @@ El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010}
 % Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
 %                                                                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Discusion}
 
 
 \section{Resultados}
@@ -229,7 +230,7 @@ El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010}
   \includegraphics[width=0.4\textwidth]{figuras/map_Tm_CR2208_DEMT-AIA_H1_L522_r3d_1105_Rsun.jpg}  
   \includegraphics[width=0.4\textwidth]{figuras/map_Ne_awsom_2208_185_short_1105_Rsun.jpg}
   \includegraphics[width=0.4\textwidth]{figuras/map_Te_awsom_2208_185_short_1105_Rsun.jpg}
-    \caption{Mapas de Carrington de densidad y temperatura electrónica de CR-2082 y CR-2208 de resultados tomográficos en la altura  1.105 ${\rm R_\odot}$.}
+    \caption{Mapas de Carrington de $T_e$ (derecha) y $N_e$ (izquierda) de CR-2082 y CR-2208 a 1.105 ${\rm R_\odot}$ obtenidas con DEMT y con AWSoM. Las celdas negras corresponden a regiones no reconstruidas, mientras que la curva negra indica el límite de las region magnéticamente abierta en los polos de la magnéticamete cerrada en el Streamer.}
   \label{fig-carrington}
 \end{figure*}
 
@@ -250,7 +251,7 @@ El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010}
    \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_ne_1055.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_Tm.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_lambda_n.eps}
-  \caption{Histogramas}
+  \caption{Histograma de frecuencia de CR-2082 y CR-2208 de $N_e$ a 1.055 ${\rm R_\odot}$, escala de altura de la densidad electrónica y $T_e$. En azul se muestran los resultados obtenidos con DEMT y en rojo con AWSoM junto con la mediana de la respectiva estadística.}
   \label{fig-histos}
 \end{figure*}
 
@@ -265,6 +266,9 @@ El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010}
 %  \caption{Histogramas}
 %  \label{fig-histos2}
 %\end{figure*}
+
+\section{Discusión y trabajo futuro}
+
 
 \begin{acknowledgement}
 \texttt{A Juan roberto Macri}
