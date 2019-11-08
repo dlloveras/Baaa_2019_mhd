@@ -202,13 +202,14 @@ Debido a que la corona es gobernada por el campo magnético, resulta de particul
 
 \section{Método}
 
-El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010} como condiciones de contorno en la fotósfera y permite obtener una estructura 3D de parámetros físicos (densidad y temperatura electrónica entre otros) eentre 1.0${\rm R_\odot}$ y 1 UA.
+El modelo AWSOM utiliza magnetogramas synopticos de ADAPT-GONG \citep{arge_2010} como condiciones de contorno en la fotósfera y permite obtener una estructura 3D de parámetros físicos (densidad y temperatura electrónica entre otros) entre 1.0${\rm R_\odot}$ y 1 UA. El modelo presenta un region de transición extendida desde la fotósfera hasta $\sim$ 1.5${\rm R_\odot}$, región que no se tuvo en cuenta en la comparación debido a los valores
 
-Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes EUV cubriendo media rotación solar permitiendo reconstruir la emisividad en forma 3D en la baja corona. Combinando la emisividad de todas las bandas del telescopio se obtiene la \rm{medida de emisión diferencial local} (LDEM). Esta medida es una descripcion cualitativa de la distrubución térmica del plasma en cada celda de la grilla 3D.
+Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes EUV cubriendo media rotación solar permitiendo reconstruir la emisividad en forma 3D en la baja corona. Combinando la emisividad de todas las bandas del telescopio se obtiene la \rm{medida de emisión diferencial local} (LDEM). Esta medida es una descripcion cualitativa de la distrubución térmica del plasma en cada celda de la grilla 3D con celdas de dimension 0.01${\rm R_\odot}$ en dirección radial y 2$^{\circ}$ en latitud y longitud.
 
+En el presente trabajo se utilizaron imagenes obtenidas con STEREO/EUVI-A y SDO/AIA para CR2082 y CR2208 respectivamente. La selección es debido a que ambos períodos muetran baja actividad coronal, mostrando una corona altamente axysimétrica con agujeros coronales en la zona polar y un streamer dominante en las latitudes ecuatoriales. Las imagnes de EUV estan afectadas de \rm{contaminación de luz dispersa} que fue removida aplicando a cada imagen un \rm{función dispersión del punto} aplicada a cada pixel, para una explicacion mas detallada sobre el método y el impacto en la reconstrucción tomográfica referirse a \citet{shearer_2012} y \citet{lloveras_ba2017}. Para las imágenes de AIA no existe al momento de la escritura de este artículo una función de dispersión adecuada pero se estima que los telescopios de esta generación se ven menos afectados por esta contaminación.
 
-*explicar celdas negras
-*explicar mapoc
+Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéticas se utilizó el campo dado por el modelo MHD. El modelo usa como condicioón de contorno el magnetograma y como condición inicial el modelo potencial con superficie fuente (PFSS) obtenido resolviendo la ecuacion de Laplace, considerando campo radial en 2.5${\rm R_\odot}$ y luego evolucionandolo en el tiempo \citep{vander_2010}. Los resultados termodinámicos de DEMT y AWSoM son trazados a lo largo de las líneas de campo dentro de la grilla 3D. 
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -219,6 +220,16 @@ Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes 
 
 
 \section{Resultados}
+Como ejemplo de los productos tomográficos y del modelo MHD, mostramos en la Figura \ref{fig-carrington} cortes a una altura fija de densidad y temperatura electrónica para ambos modelos y ambas rotaciones seleccionadas. La línea negra sólida demarca la frontera entre las líneas magnéticas abiertas (zona polar) de las íneas cerradas (zona ecuatorial). En los mapas de DEMT las celdas negras rempresentan celdas no reconstruidas por la técnica y fueron excluidas del análisis.
+
+*observaciones de los mapas de carrington
+
+*introducir el trazado que permite subseleccion de lineas
+
+*trazado de Ne
+*pearson de temp
+
+*luego los histogramas comparativos de las lineas seleccionadas de \ref{fig-histos}
 
 \begin{figure*}
   \centering
@@ -230,27 +241,33 @@ Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes 
   \includegraphics[width=0.4\textwidth]{figuras/map_Tm_CR2208_DEMT-AIA_H1_L522_r3d_1105_Rsun.jpg}  
   \includegraphics[width=0.4\textwidth]{figuras/map_Ne_awsom_2208_185_short_1105_Rsun.jpg}
   \includegraphics[width=0.4\textwidth]{figuras/map_Te_awsom_2208_185_short_1105_Rsun.jpg}
-    \caption{Mapas de Carrington de $T_e$ (derecha) y $N_e$ (izquierda) de CR-2082 y CR-2208 a 1.105 ${\rm R_\odot}$ obtenidas con DEMT y con AWSoM. Las celdas negras corresponden a regiones no reconstruidas, mientras que la curva negra indica el límite de las region magnéticamente abierta en los polos de la magnéticamete cerrada en el Streamer.}
+    \caption{Mapas de Carrington de $T_e$ (derecha) y $N_e$ (izquierda) de CR-2082 y CR-2208 a 1.105 ${\rm R_\odot}$ obtenidas con DEMT y con AWSoM. Las celdas negras corresponden a regiones no reconstruidas, mientras que la curva negra indica el límite de las region magnéticamente abierta en los polos de la magnéticamete cerrada en el Streamer y es obtenida utilizando AWSoM.}
   \label{fig-carrington}
 \end{figure*}
 
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.4\textwidth]{figuras/Midpoint_2082_demt-proceeding_Rpoint-map.eps}
-  \includegraphics[width=0.4\textwidth]{figuras/Midpoint_2208_demt-proceeding_Rpoint-map.eps}
-  \caption{Lolcalización física de los arcos magnéticos a 1.075 ${\rm R_\odot}$. En amarillo la región cerrada y en violeta la región abierta.}
-  \label{fig-rpoint}
-\end{figure*}
+%\begin{figure*}
+%  \centering
+%  \includegraphics[width=0.4\textwidth]{figuras/Midpoint_2082_demt-proceeding_Rpoint-map.eps}
+%  \includegraphics[width=0.4\textwidth]{figuras/Midpoint_2208_demt-proceeding_Rpoint-map.eps}
+%  \caption{Lolcalización física de los arcos magnéticos a 1.075 ${\rm R_\odot}$. En amarillo la región cerrada y en violeta la región abierta.}
+%  \label{fig-rpoint}
+%\end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_ne_1055.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_Tm.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_lambda_n.eps}\\
-   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_ne_1055.eps}
+  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_ne_1055.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_Tm.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_lambda_n.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_ne_1055.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_Tm.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_lambda_n.eps}\\
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_ne_1055.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_Tm.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_lambda_n.eps}
   \caption{Histograma de frecuencia de CR-2082 y CR-2208 de $N_e$ a 1.055 ${\rm R_\odot}$, escala de altura de la densidad electrónica y $T_e$. En azul se muestran los resultados obtenidos con DEMT y en rojo con AWSoM junto con la mediana de la respectiva estadística.}
   \label{fig-histos}
 \end{figure*}
