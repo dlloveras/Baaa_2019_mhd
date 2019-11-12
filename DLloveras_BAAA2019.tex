@@ -211,7 +211,7 @@ En el presente trabajo se utilizaron imágenes obtenidas con STEREO/EUVI-A y SDO
 
 %Las imágenes de EUVI están afectadas por \rm{contaminación de luz dispersa} que fue removida aplicando a cada imagen una \rm{función dispersión del punto} aplicada a cada pixel, para una explicación detallada sobre el método y el impacto en la reconstrucción tomográfica referirse a \citet{shearer_2012} y \citet{lloveras_ba2017} respectivamente. Para las imágenes de AIA no existe al momento de la escritura de este artículo una función de dispersión adecuada pero se estima que los telescopios de esta generación se ven menos afectados por esta contaminación.
 
-Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéticas se utilizó el campo dado por el modelo MHD. Para este fin se determina la geometría de las líneas de campo desde coordenadas específicas de un punto de partida tanto hacia el exterior como hacia el interior. Para muestrear uniformemente el volumen abarcado por las reconstrucciones DEMT, se seleccionó un punto de partida en el centro de cada celda de la grilla 3D a 6 alturas espaciadas uniformemente desde 1.02 a 1.25 $\,{\rm R_\odot}$. Cada línea de campo trazada se clasifica como "abierta" si se cruza con la superficie de origen establecida en 2.5$\,{\rm R_\odot}$ (donde las líneas se vuelven radiales), o como "cerrada" de lo contrario. Luego los resultados termodinámicos de DEMT y AWSoM son trazados a lo largo de las líneas de campo abiertas y cerradas dentro de la grilla 3D. 
+Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéticas se utilizó el campo dado por el modelo MHD. Para este fin se determina la geometría de las líneas de campo desde coordenadas específicas de un punto de partida tanto hacia el exterior como hacia el interior. Para muestrear uniformemente el volumen abarcado por las reconstrucciones DEMT, se seleccionó un punto de partida en el centro de cada celda de la grilla 3D a 6 alturas espaciadas uniformemente desde 1.02 a 1.25 $\,{\rm R_\odot}$. Cada línea de campo trazada se clasifica como abierta si cruza la superficie de origen establecida en 2.5$\,{\rm R_\odot}$ (donde las líneas se vuelven radiales), o como cerrada en caso contrario. Luego los resultados termodinámicos de DEMT y AWSoM son trazados a lo largo de las líneas de campo abiertas y cerradas dentro de la grilla 3D. 
 
 
 
@@ -223,17 +223,14 @@ Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéti
 
 
 \section{Resultados}
-Como ejemplo de los productos tomográficos y del modelo MHD, mostramos en la Figura \ref{fig-carrington} cortes a una altura media de densidad y temperatura electrónica para ambos modelos y ambas rotaciones seleccionadas. La línea negra sólida demarca la frontera entre las líneas magnéticas abiertas (zona polar) de las líneas cerradas (zona ecuatorial). En los mapas de DEMT las celdas negras representan celdas no reconstruidas por la técnica y fueron excluidas del análisis.
-
-Estos mapas muestran rotaciones altamente axysimétricas con estructuras de $N_e$ y $T_e$ modeladas satisfactoriamente tanto en morfología como orden de magnitud.
-
-Los resultados termodinámicos fueron trazada a lo largo de las líneas magnéticas. Los loops cerrados son separados en dos piernas desde la base hasta el ápice. Para cada linea abierta y cada pierna cerrada $N_e(r)$ fue ajustada a una solución hidrostática isotérmica y una escala de altura $\lambda_n$ es determinada. Las variaciones de temperatura con la altura $T_e(r)$ son suaves y su promedio a lo largo de las piernas fue determinado para obtener un valor característico. Para este trabajo se tomó en consideración como subselección de estructuras magnéticas las regiones de los agujeros coronales (líneas abiertas) y la del streamer ecuatorial (líneas cerradas), una mas detallada selección de estructuras puede encontrarse en \citet{lloveras_2017}. 
-
-Debido a que modelo MHD presenta unicamente loops con temperatura creciente, en esta comparación para los resultados DEMT se seleccionaron las piernas $T_e(r)$ con correlación de Pearson $\rho > 0.5$ y p-valor $< 0.05$ dejando de lado a las piernas isotérmicas $\left | \rho \right | < 0.5$ y las piernas con temperatura decreciente $\rho < 0.5$. Las piernas $N_e(r)$ son linealizadas y se ajusta una recta. Los datos son sometidos a un test de hipótesis asumiendo la recta ajustada como el valor esperado y se descartan las piernas con p-valor $<0.05$.
+Como ejemplo de los productos tomográficos y del modelo MHD, se nuestra en la Figura \ref{fig-carrington} mapas latitud/longitud (a una altura dada) de la densidad y temperatura electrónicas, para las dos rotaciones seleccionadas. La línea negra sólida demarca la frontera entre las líneas magnéticas abiertas (asociada a los agujeros coronales) de las líneas cerradas (asociadas al cinturón ecuatorial de \emph{Streamers}). En los mapas de DEMT las celdas negras representan celdas no reconstruidas por la técnica y fueron excluidas del análisis.
 
 
-Como ejemplo, la Figura \ref{fig-histos} muestra distribución estadística de los resultados DEMT y AWSoM para cada subregion seleccionada. Mientras que $\lambda_n$ es consistente con las observaciones, AWSoM presenta diferencias $<30\%$ en $\left<T_m\right>$ y $N_e$ según la rotación. Similares diferencias se observaron en los agujeros coronales.
+Los loops cerrados fueron separados en dos piernas desde la base hasta el ápice. Cada línea abierta y cada pierna cerrada $N_e(r)$ es ajustada con una solución hidrostática isotérmica, donde una densidad basal y una escala de altura $\lambda_n$ son determinadas. Las variaciones de temperatura con la altura $T_e(r)$ son suaves y su promedio a lo largo de las piernas fue determinado para obtener un valor característico. Para este trabajo se tomó en consideración como subselección de estructuras magnéticas las regiones asociadas a agujeros coronales y al streamer ecuatorial, una mas detallada selección de estructuras puede encontrarse en \citet{lloveras_2017}. 
 
+Debido a que el modelo MHD presenta únicamente loops con temperatura creciente, en esta comparación para los resultados DEMT se seleccionaron las piernas $T_e(r)$ con correlación de Pearson $\rho>0.5$ y p-valor $ < 0.05$ dejando de lado a las piernas isotérmicas $\left | \rho \right | < 0.5$ y las piernas con temperatura decreciente $\rho < 0.5$. Las piernas $N_e(r)$ son linealizadas y se ajusta una recta. Los datos son sometidos a un test de hipótesis asumiendo la recta ajustada como el valor esperado y se descartan las piernas con p-valor $<0.05$.
+
+El modelo MHD no modela apropiadamente el rango ($1.00 - 1.05\,{\rm R_\odot}$) debido a que considera una región de transición extendida. Dicho rango fué dejado fuera de la comparación. La Figura \ref{fig-histos} muestra la distribución estadística de los resultados DEMT y AWSoM en el streamer. AWSoM presenta diferencias $<30\%$ en $\left<T_e\right>$ y $N_e (r=1.05\,{\rm R_\odot})$ según la rotación mientras que $\lambda_n$ es consistente con las observaciones. Similares diferencias se observaron en las líneas abiertas.
 
 \begin{figure*}
   \centering
@@ -272,7 +269,7 @@ Como ejemplo, la Figura \ref{fig-histos} muestra distribución estadística de l
 %  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_ne_1055.eps}
 %  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_Tm.eps}
 %  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_lambda_n.eps}
-  \caption{Histograma de frecuencia de CR-2082 y CR-2208 de $N_e$ a 1.055 ${\rm R_\odot}$, escala de altura de la densidad electrónica y $\left<T_m\right>$. En azul se muestran los resultados obtenidos con DEMT y en rojo con AWSoM junto con la mediana de la respectiva estadística para la región del streamer.}
+  \caption{Histograma de frecuencia de CR-2082 y CR-2208 de $N_e$ a 1.055 ${\rm R_\odot}$, escala de altura de la densidad electrónica y $\left<T_e\right>$. En azul se muestran los resultados obtenidos con DEMT y en rojo con AWSoM junto con la mediana de la respectiva estadística para la región del streamer.}
   \label{fig-histos}
 \end{figure*}
 
@@ -290,9 +287,11 @@ Como ejemplo, la Figura \ref{fig-histos} muestra distribución estadística de l
 
 \section{Conclusiones y trabajo futuro}
 
-El modelo AWSoM reproduce las estructuras de streamer y agujero coronal de forma global. Es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. Para un análisis mas detallado, un enfoque diferente es requerido para proporcionar modelo de loops decrecientes en temperatura con la altura. Los modelados en densidad presentan escalas de altura $\lambda_n$ muy similares y diferencias en la altura mas baja comparablemente posible (1.05$\,{\rm R_\odot}$) $<30 \%$ según la rotación modelada. Esto demuestra un gran avance en la capacidad del modelo para reproducir la termodinámica de la baja corona.
+El modelo AWSoM reproduce la simetría axial de las estructuras de streamer y agujero coronal de forma global. Es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. Los modelados en densidad presentan escalas de altura $\lambda_n$ muy similares y diferencias en la altura mas baja comparablemente posible (1.05$\,{\rm R_\odot}$) $<30 \%$ según la rotación modelada y es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. 
+ 
+Este anális muestra un gran avance en la capacidad del modelo para reproducir la termodinámica de la baja corona. De todas formas un enfoque diferente en la conversión de modos de Alfvén en la región de transición podría generar loops con temperaturas decrecientes. Este tipo de loops son dominantes en la zona proxima al ecuador duranto un mínimo de actividad solar \citep{nuevo_2013}.
 
-Próximamente se llevará a cabo una comparación mas extensa y detallada utilizando subregiones cuidadosamente seleccionadas y se incluirá una comparación de flujo de energía entrante.
+Próximamente se publicará una comparación mas extensa y detallada utilizando subregiones cuidadosamente seleccionadas y se incluirá una comparación de flujo de energía entrante.
 
 
 %\begin{acknowledgement}
