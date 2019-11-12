@@ -105,7 +105,7 @@
 
 \thematicarea{8}
 
-\title{Estudio de Validación Tomográfica del modelo MHD AWSoM}
+\title{Estudio de Validación Tomográfica del Modelo MHD AWSoM}
 %\subtitle{Instrucciones de estilo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -160,12 +160,12 @@ Climate and Space Sciences and Engineering, Universidad de Michigan, EEUU.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \resumen{
-Los modelos magnetohidrodinámicos (MHD) tridimensionales (3D),  necesarios para modelar y predecir el clima espacial, deben ser validados observacionalmente. A escala global, esto puede ser hecho mediante tomografía de medida de emisión diferencial (DEMT), que provee resultados 3D de densidad y temperatura electrónica en la baja corona ($1.0-1.25 \, \rm{R}_\odot$). Realizamos una validación DEMT de la versión mas reciente del Alfvén Wave Solar Model (AWSoM) del Space Weather Modeling Framework (SWMF). Se lleva a cabo un análisis comparativo a lo largo de las líneas de campo de la densidad y temperatura electrónicas del modelo y la tomografía. Para este estudio se seleccionaron dos rotaciones de mínimo solar, una entre los ciclos solares (SC) 23 y 24, y otra entre los SCs 24 y 25. Discutimos las diferencias observadas entre el modelo y los productos tomográficos, y las limitaciones y posibles mejoras futuras para el modelo AWSoM.)
+Los modelos magnetohidrodinámicos (MHD) tridimensionales (3D) de la corona solar, necesarios para modelar y predecir el clima espacial, deben ser validados observacionalmente. A escala global, esto puede ser hecho mediante tomografía de medida de emisión diferencial (DEMT), que provee resultados 3D de densidad y temperatura electrónica en la baja corona ($1.0-1.25 \, \rm{R}_\odot$). Realizamos una validación DEMT de la versión mas reciente del Alfvén Wave Solar Model (AWSoM) del Space Weather Modeling Framework (SWMF). Se lleva a cabo un análisis comparativo a lo largo de las líneas de campo de la densidad y temperatura electrónicas del modelo y la tomografía. Para este estudio se seleccionaron dos rotaciones de mínimo solar, una entre los ciclos solares (SC) 23 y 24, y otra entre los SCs 24 y 25. Discutimos las diferencias observadas entre el modelo y los productos tomográficos, y las limitaciones y posibles mejoras futuras para el modelo AWSoM.
 }
 
 %Discutimos las diferencias observadas ente el modelo y los productos tomográficos, y las limitaciones y posibles mejoras futuras para el modelo AWSoM (no me deja poner mas lineas!)
 \abstract{
-Aiming model and forecast the space climate, the tri-dimensional (3D) magnetohydrodinamic (MHD) models are in need of observational validations. This can be done using the differential emission measure technique (DEMT) which provides 3D results of electronic density and temperature in the low corona ($1.0-1.25 \, \rm{R}_\odot$). We performed a DEMT validation of the last version of the Alfvén Wave Solar Model (AWSoM) within the Space Weather Modeling Framework (SWMF). We carried out a comparative analysis along de magnetic field lines using thermodynamic quantities of the model and the tomography results. In this study we selected two rotations of the solar minimum between solar cicle (SC) 23 and 24, and the other one between SCs 24 and 25. We discuss the difference observed between the model and the observations, the limitations and the possible upgrades to the AWSOM model.)
+The three-dimensional (3D) magnetohydrodynamic (MHD) models of the solar corona, necessary to model and predict space weather, must be validated observationally. On a global scale, this can be done using differential emission measure tomography (DEMT) technique, which provides 3D results of electron density and temperature in the low corona ($1.0-1.25 \,\rm {R}_\odot $). We performed a DEMT validation of the most recent version of Alfvén Wave Solar Model (AWSoM) within the Space Weather Modeling Framework (SWMF). A comparative analysis is carried out along the field lines of the electronic density and temperature of the model and tomography. For this study two solar minimum rotations are selected, one between solar cycles (SC) 23 and 24 and another between SCs 24 and 25. We discuss the differences observed between the model and tomographic products and the limitations and possible improvements future for the AWSoM model.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,25 +190,28 @@ Aiming model and forecast the space climate, the tri-dimensional (3D) magnetohyd
 
 \section{Introducción}
 \label{S_intro}
-La observación y el modelado de la Corona solar resulta de gran relevancia para el entendimiento de la relación Sol-Tierra, ya que en la Corona es donde el viento solar es calentado, acelerado y tienen lugar eventos impulsivos como eyecciones de masa coronal, flares, etc.
-Predecir eventos de clima espacial y sus efectos geomagnéticos requieren modelos 3D precisos de la atmósfera solar basados en la física que se extiende desde la cromosfera, pasando por la corona, hasta la heliosfera. Estos modelos han evolucionado mucho a lo largo de los años, y conforme lo hacen necesitan ser validados mediante nuevas observaciones y mas detalladas comparaciones.
+La observación y el modelado de la corona solar resulta de gran relevancia para el estudio de la relación Sol-Tierra, ya que es donde el viento solar es calentado, acelerado y tienen lugar eventos impulsivos como eyecciones de masa coronal, flares, etc.
+Predecir eventos de clima espacial y sus efectos geomagnéticos requiere modelos 3D de la atmósfera solar que se extiende desde la cromosfera, pasando por la corona, hasta la heliosfera. Estos modelos han evolucionado mucho a lo largo de los años, y conforme lo hacen necesitan ser validados mediante nuevas observaciones y análisis detallados.
 
-En el presente trabajo nos focalizaremos en el modelo MHD coronal y de viento solar  Alfvén Wave Solar atmosphere Model (AWSoM) que forma parte del space weather Modeling framework (SWMF) \citet{Toth_2012}. El modelo utiliza calentamiento por ondas de Alfvén para proveer un modelo físico descriptivo 3D auto consistente de calentamiento coronal y aceleración de viento solar \citep{sokolov_2013}  \citep{vander_2014}.
+En el presente trabajo nos focalizaremos en el modelo MHD 3D coronal y de viento solar  Alfvén Wave Solar Model (AWSoM) que forma parte del space weather Modeling framework (SWMF) \citet{Toth_2012}. El modelo utiliza calentamiento por ondas de Alfvén para proveer un modelo físico descriptivo 3D auto consistente de calentamiento coronal y aceleración de viento solar \citep{sokolov_2013}  \citep{vander_2014}.
 
-A medida que el modelo adopta nuevas mejoras es necesario contrastar los resultados con observaciones. En una reciente publicación \citet{sachdeva_2019} llevó a cabo una validación de la última versión del modelo para la rotación de Carrington (CR) CR2208 y CR2209 con datos \rm{in situ} de ACE, Wind, SDO/AIA, Ulysses, SOHO/LASCO, IPS y OMNI. Los datos de AIA fueron procesados con la técnica tomográfica DEMT \citep{frazin_2009} la cual permite obtener una distribución 3D de densidad y temperaturas electrónicas dentro del rango 1.0 - 1.25${\rm R_\odot}$. Llevaron a cabo comparaciones globales calculando la diferencia relativa pixel a pixel $RD = \frac{X_{AWSoM}}{X_{DEMT}}-1$ a alturas constantes tanto para para $N_e$ como para $T_e$ y se mostró que el modelo es capaz de reproducir las observaciones dentro de un $\sim 20-30\%$. 
+A medida que el modelo es mejorado es necesario contrastar los resultados con observaciones. En una reciente publicación \citet{sachdeva_2019} llevaron a cabo una validación de la última versión del modelo para la rotación de Carrington (CR) CR2208 y CR2209 con datos \rm{in situ} de ACE, Wind, SDO/AIA, Ulysses, SOHO/LASCO, IPS y OMNI. Los datos de AIA fueron procesados con la técnica tomográfica DEMT \citep{frazin_2009} la cual permite obtener una distribución 3D de densidad y temperaturas electrónicas dentro del rango 1.0 - 1.25$\,{\rm R_\odot}$. \citet{sachdeva_2019} calcularon la diferencia relativa entre los resultados de AWSoM y DEMT. Tanto para la densidad electrónica $N_e$ como para la temperatura electrónica $T_e$ los resultados de ambos modelos difieren en el rango $10-30\%$ en diferentes regiones coronales.
+
 
 Debido a que la corona es gobernada por el campo magnético, resulta de particular interés analizar  la termodinámica de líneas de campo asociadas a distintas estructuras magnéticas (Streamer, Agujero coronal, etc.). Con esta idea en mente presentamos en este trabajo el primer esfuerzo de validación del modelo AWSoM en la baja corona comparando la termodinámica con un modelo semi empírico (DEMT) seleccionando distintas estructuras magnéticas. Para esto se seleccionó la rotación CR2082 correspondiente al mínimo de actividad solar del 2009 y una rotación de la fase de  declinación actual CR2208 (septiembre 2018).
 
 
 \section{Método}
+El modelo AWSoM utiliza un magnetograma sinóptico ADAPT-GONG \citep{arge_2010} como condición de contorno. Como condición inicial utiliza el modelo potencial con superficie fuente (PFSS) obtenido resolviendo la ecuación de Laplace, considerando campo radial en 2.5$\,{\rm R_\odot}$ y luego evolucionandolo en el tiempo \citep{vander_2010}. Finalmente permite obtener una estructura 3D de parámetros físicos (densidad y temperatura electrónica entre otros) entre 1.0$\,{\rm R_\odot}$ y 1$\,$UA. La última versión del modelo presenta una región de transición extendida desde la fotosfera hasta $\sim$ 1.05$\,{\rm R_\odot}$, región que no se tuvo en cuenta en la comparación.
 
-El modelo AWSOM utiliza magnetogramas synopticos ADAPT-GONG \citep{arge_2010} como condiciones de contorno en la fotosfera y permite obtener una estructura 3D de parámetros físicos (densidad y temperatura electrónica entre otros) entre 1.0${\rm R_\odot}$ y 1 UA. El modelo presenta una región de transición extendida desde la fotosfera hasta $\sim$ 1.05${\rm R_\odot}$, región que no se tuvo en cuenta en la comparación.
 
-Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes EUV cubriendo media rotación solar permitiendo reconstruir la emisividad en forma 3D en la baja corona. Combinando la emisividad de todas las bandas del telescopio se obtiene la \rm{medida de emisión diferencial local} (LDEM). Esta medida es una descripción cualitativa de la distribución térmica del plasma en cada celda de la grilla 3D de dimensión 0.01${\rm R_\odot}$ en dirección radial y 2$^{\circ}$ en latitud y longitud.
+Por otro lado el modelo DEMT utiliza como datos una serie temporal de imágenes EUV cubriendo media rotación solar permitiendo reconstruir la emisividad en forma 3D en la baja corona. Combinando la emisividad de todas las bandas del telescopio se obtiene la \rm{medida de emisión diferencial local} (LDEM). Esta medida es una descripción cualitativa de la distribución térmica del plasma en cada celda de la grilla 3D de dimensión 0.01$\,{\rm R_\odot}$ en dirección radial y 2$^{\circ}$ en latitud y longitud.
 
-En el presente trabajo se utilizaron imágenes obtenidas con STEREO/EUVI-A y SDO/AIA para CR2082 y CR2208 respectivamente. La selección es debido a que ambos períodos presentan baja actividad coronal, mostrando una corona altamente axysimétrica con agujeros coronales en la zona polar y un streamer dominante en las latitudes ecuatoriales. Las imágenes de EUVI están afectadas por \rm{contaminación de luz dispersa} que fue removida aplicando a cada imagen una \rm{función dispersión del punto} aplicada a cada pixel, para una explicación detallada sobre el método y el impacto en la reconstrucción tomográfica referirse a \citet{shearer_2012} y \citet{lloveras_ba2017} respectivamente. Para las imágenes de AIA no existe al momento de la escritura de este artículo una función de dispersión adecuada pero se estima que los telescopios de esta generación se ven menos afectados por esta contaminación.
+En el presente trabajo se utilizaron imágenes obtenidas con STEREO/EUVI-A y SDO/AIA para CR2082 y CR2208 respectivamente. La selección es debido a que ambos períodos presentan baja actividad coronal, mostrando una corona con fuerte simetría axial y con agujeros coronales en la zona polar y un streamer dominante en las latitudes ecuatoriales. Para el procesado de imágenes y la reconstrucción tomográfica se aplicaron todos los procedimientos en su estado-del-arte, detallados en \citet{lloveras_ba2017}.
 
-Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéticas se utilizó el campo dado por el modelo MHD. El modelo usa como condición de contorno el magnetograma y como condición inicial el modelo potencial con superficie fuente (PFSS) obtenido resolviendo la ecuación de Laplace, considerando campo radial en 2.5${\rm R_\odot}$ y luego evolucionandolo en el tiempo \citep{vander_2010}. Los resultados termodinámicos de DEMT y AWSoM son trazados a lo largo de las líneas de campo dentro de la grilla 3D. 
+%Las imágenes de EUVI están afectadas por \rm{contaminación de luz dispersa} que fue removida aplicando a cada imagen una \rm{función dispersión del punto} aplicada a cada pixel, para una explicación detallada sobre el método y el impacto en la reconstrucción tomográfica referirse a \citet{shearer_2012} y \citet{lloveras_ba2017} respectivamente. Para las imágenes de AIA no existe al momento de la escritura de este artículo una función de dispersión adecuada pero se estima que los telescopios de esta generación se ven menos afectados por esta contaminación.
+
+Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéticas se utilizó el campo dado por el modelo MHD. Para este fin se determina la geometría de las líneas de campo desde coordenadas específicas de un punto de partida tanto hacia el exterior como hacia el interior. Para muestrear uniformemente el volumen abarcado por las reconstrucciones DEMT, se seleccionó un punto de partida en el centro de cada celda de la grilla 3D a 6 alturas espaciadas uniformemente desde 1.02 a 1.25 $\,{\rm R_\odot}$. Cada línea de campo trazada se clasifica como "abierta" si se cruza con la superficie de origen establecida en 2.5$\,{\rm R_\odot}$ (donde las líneas se vuelven radiales), o como "cerrada" de lo contrario. Luego los resultados termodinámicos de DEMT y AWSoM son trazados a lo largo de las líneas de campo abiertas y cerradas dentro de la grilla 3D. 
 
 
 
@@ -242,7 +245,7 @@ Como ejemplo, la Figura \ref{fig-histos} muestra distribución estadística de l
   \includegraphics[width=0.4\textwidth]{figuras/map_Tm_CR2208_DEMT-AIA_H1_L522_r3d_1105_Rsun.jpg}  
   \includegraphics[width=0.4\textwidth]{figuras/map_Ne_awsom_2208_185_short_1105_Rsun.jpg}
   \includegraphics[width=0.4\textwidth]{figuras/map_Te_awsom_2208_185_short_1105_Rsun.jpg}
-    \caption{Mapas de Carrington de $T_e$ (derecha) y $N_e$ (izquierda) de CR-2082 y CR-2208 a 1.105 ${\rm R_\odot}$ obtenidas con DEMT y con AWSoM. Las celdas negras corresponden a regiones no reconstruidas, mientras que la curva negra indica el límite de las región magnéticamente abierta en los polos de la magnéticamete cerrada en el Streamer.}
+    \caption{Mapas de Carrington de $T_e$ (derecha) y $N_e$ (izquierda) de CR-2082 y CR-2208 a 1.105 ${\rm R_\odot}$ obtenidas con DEMT y con AWSoM. En los mapas tomográficos, las celdas negras corresponden a regiones no reconstruídas. En todos los paneles las curvas negras indican las fronteras entre las regiones magnéticas abiertas y cerradas (determinadas en base al modelo magnético de AWSoM).}
   \label{fig-carrington}
 \end{figure*}
 
@@ -258,17 +261,17 @@ Como ejemplo, la Figura \ref{fig-histos} muestra distribución estadística de l
 \begin{figure*}
   \centering
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_ne_1055.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_Tm.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_lambda_n.eps}\\
+  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_lambda_n.eps}  
+  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_streamer_Tm.eps}\\
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_ne_1055.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_Tm.eps}
   \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_lambda_n.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_ne_1055.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_Tm.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_lambda_n.eps}\\
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_ne_1055.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_Tm.eps}
-  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_lambda_n.eps}
+  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_streamer_Tm.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_ne_1055.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_Tm.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2082_demt_awsom_CH_lambda_n.eps}\\
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_ne_1055.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_Tm.eps}
+%  \includegraphics[width=0.32\textwidth]{figuras/proceeding_2208_demt_awsom_CH_lambda_n.eps}
   \caption{Histograma de frecuencia de CR-2082 y CR-2208 de $N_e$ a 1.055 ${\rm R_\odot}$, escala de altura de la densidad electrónica y $\left<T_m\right>$. En azul se muestran los resultados obtenidos con DEMT y en rojo con AWSoM junto con la mediana de la respectiva estadística para la región del streamer.}
   \label{fig-histos}
 \end{figure*}
@@ -287,7 +290,7 @@ Como ejemplo, la Figura \ref{fig-histos} muestra distribución estadística de l
 
 \section{Conclusiones y trabajo futuro}
 
-El modelo AWSoM reproduce las estructuras de streamer y agujero coronal de forma global. Es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. Para un análisis mas detallado, un enfoque diferente es requerido para proporcionar modelo de loops decrecientes en temperatura con la altura. Los modelados en densidad presentan escalas de altura $\lambda_n$ muy similares y diferencias en la altura mas baja comparablemente posible (1.05${\rm R_\odot}$) $<30 \%$ según la rotación modelada. Esto demuestra un gran avance en la capacidad del modelo para reproducir la termodinámica de la baja corona.
+El modelo AWSoM reproduce las estructuras de streamer y agujero coronal de forma global. Es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. Para un análisis mas detallado, un enfoque diferente es requerido para proporcionar modelo de loops decrecientes en temperatura con la altura. Los modelados en densidad presentan escalas de altura $\lambda_n$ muy similares y diferencias en la altura mas baja comparablemente posible (1.05$\,{\rm R_\odot}$) $<30 \%$ según la rotación modelada. Esto demuestra un gran avance en la capacidad del modelo para reproducir la termodinámica de la baja corona.
 
 Próximamente se llevará a cabo una comparación mas extensa y detallada utilizando subregiones cuidadosamente seleccionadas y se incluirá una comparación de flujo de energía entrante.
 
