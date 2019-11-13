@@ -116,7 +116,7 @@
 %                                                                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\titlerunning{Macro BAAA61B con instrucciones de estilo}
+\titlerunning{Validación Modelo MHD AWSoM}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                            %
@@ -226,11 +226,18 @@ Para llevar a cabo una comparación termodinámica a lo largo de lineas magnéti
 Como ejemplo de los productos tomográficos y del modelo MHD, se nuestra en la Figura \ref{fig-carrington} mapas latitud/longitud (a una altura dada) de la densidad y temperatura electrónicas, para las dos rotaciones seleccionadas. La línea negra sólida demarca la frontera entre las líneas magnéticas abiertas (asociada a los agujeros coronales) de las líneas cerradas (asociadas al cinturón ecuatorial de \emph{Streamers}). En los mapas de DEMT las celdas negras representan celdas no reconstruidas por la técnica y fueron excluidas del análisis.
 
 
-Los loops cerrados fueron separados en dos piernas desde la base hasta el ápice. Cada línea abierta y cada pierna cerrada $N_e(r)$ es ajustada con una solución hidrostática isotérmica, donde una densidad basal y una escala de altura $\lambda_n$ son determinadas. Las variaciones de temperatura con la altura $T_e(r)$ son suaves y su promedio a lo largo de las piernas fue determinado para obtener un valor característico. Para este trabajo se tomó en consideración como subselección de estructuras magnéticas las regiones asociadas a agujeros coronales y al streamer ecuatorial, una mas detallada selección de estructuras puede encontrarse en \citet{lloveras_2017}. 
+Los arcos cerrados fueron separados en dos piernas desde la base hasta el ápice. Para cada  pierna  se ajustó el perfil de $N_e(r)$ utilizando un modelo hidrostático isotérmico (Ec. 5 de \citet{lloveras_2017}) y se determinaron los valores de densidad basal y escala de altura correspondientes. Los paneles izquierdos y medios de la Figura \ref{fig-histos} muestran histogramas de estas dos cantidades para el modelo AWSOM  y DEMT en la región del streamer para las dos rotaciones estudiadas. El panel derecho de la Figura \ref{fig-histos} muestra histogramas de la temperatura media a lo largo de la pierna.
 
-Debido a que el modelo MHD presenta únicamente loops con temperatura creciente, en esta comparación para los resultados DEMT se seleccionaron las piernas $T_e(r)$ con correlación de Pearson $\rho>0.5$ y p-valor $ < 0.05$ dejando de lado a las piernas isotérmicas $\left | \rho \right | < 0.5$ y las piernas con temperatura decreciente $\rho < 0.5$. Las piernas $N_e(r)$ son linealizadas y se ajusta una recta. Los datos son sometidos a un test de hipótesis asumiendo la recta ajustada como el valor esperado y se descartan las piernas con p-valor $<0.05$.
+%Cada línea abierta y cada pierna cerrada $N_e(r)$ es ajustada con una solución hidrostática isotérmica, donde una densidad basal y una escala de altura $\lambda_n$ son determinadas. Las variaciones de temperatura con la altura $T_e(r)$ son suaves y su promedio a lo largo de las piernas fue determinado para obtener un valor característico. Para este trabajo se tomó en consideración como subselección de estructuras magnéticas las regiones asociadas a agujeros coronales y al streamer ecuatorial, una mas detallada selección de estructuras puede encontrarse en \citet{lloveras_2017}. 
 
-El modelo MHD no modela apropiadamente el rango ($1.00 - 1.05\,{\rm R_\odot}$) debido a que considera una región de transición extendida. Dicho rango fué dejado fuera de la comparación. La Figura \ref{fig-histos} muestra la distribución estadística de los resultados DEMT y AWSoM en el streamer. AWSoM presenta diferencias $<30\%$ en $\left<T_e\right>$ y $N_e (r=1.05\,{\rm R_\odot})$ según la rotación mientras que $\lambda_n$ es consistente con las observaciones. Similares diferencias se observaron en las líneas abiertas.
+Para clasificar a los arcos con temperatura creciente (decreciente) se consideró que el coeficiente de correlación de pearson entre la temperatura y la altura heliocéntrica $\rho$ fuese mayor a 0.5 (menor a -0.5) y un p-valor de 0.05. Dado que el modelo MHD AWSOM presenta solo arcos con temperatura creciente, se seleccionaron solamente piernas donde $\rho> 0.5$ para las comparaciones estadísticas mostradas en la Figura \ref{fig-histos}.  
+
+%Debido a que el modelo MHD presenta únicamente arcos con temperatura creciente, en esta comparación para los resultados DEMT se seleccionaron las piernas $T_e(r)$ con correlación de Pearson $\rho>0.5$ y p-valor $ < 0.05$ dejando de lado a las piernas isotérmicas $\left | \rho \right | < 0.5$ y las piernas con temperatura decreciente $\rho < 0.5$. Las piernas $N_e(r)$ son linealizadas y se ajusta una recta. Los datos son sometidos a un test de hipótesis asumiendo la recta ajustada como el valor esperado y se descartan las piernas con p-valor $<0.05$.
+
+El modelo MHD no modela apropiadamente el rango ($1.00 - 1.05\,{\rm R_\odot}$) debido a que considera una región de transición extendida. Dicho rango fue dejado fuera de la comparación. La Figura \ref{fig-histos} muestra la distribución estadística de los resultados DEMT y AWSoM en el streamer. La mediana de los histogramas de densidad basal y temperatura media difieren en menos de un 30 \%, mientras que las medianas de los histogramas de escala de altura difieren en menos de un 5 \% para las dos rotaciones estudiadas.
+
+Encontramos diferencias similares entre los resultados  del modelo AWSoM y DEMT en los agujeros coronales  (Lloveras et al. 2020, en preparación).
+%AWSoM presenta diferencias $<30\%$ en $\left<T_e\right>$ y $N_e (r=1.05\,{\rm R_\odot})$ según la rotación mientras que $\lambda_n$ es consistente con las observaciones. Similares diferencias se observaron en las líneas abiertas.
 
 \begin{figure*}
   \centering
@@ -287,12 +294,13 @@ El modelo MHD no modela apropiadamente el rango ($1.00 - 1.05\,{\rm R_\odot}$) d
 
 \section{Conclusiones y trabajo futuro}
 
-El modelo AWSoM reproduce la simetría axial de las estructuras de streamer y agujero coronal de forma global. Es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. Los modelados en densidad presentan escalas de altura $\lambda_n$ muy similares y diferencias en la altura mas baja comparablemente posible (1.05$\,{\rm R_\odot}$) $<30 \%$ según la rotación modelada y es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. 
+El modelo AWSoM reproduce la simetría axial de las estructuras de streamer y agujero coronal de forma global. Es capaz de reproducir las estructuras magnéticas con temperatura creciente. Para estas estructuras se observan diferencias de la temperatura media menores al 30\%. Los ajustes en densidad presentan escalas de altura $\lambda_n$ muy similares y diferencias en la densidad basal $N_e(r=1.05\,{\rm R_\odot})$  menores al 30 \% según la rotación modelada y es capaz de reproducir temperaturas crecientes en las estructuras magnéticas con una diferencia $<30 \%$. 
  
-Este anális muestra un gran avance en la capacidad del modelo para reproducir la termodinámica de la baja corona. De todas formas un enfoque diferente en la conversión de modos de Alfvén en la región de transición podría generar loops con temperaturas decrecientes. Este tipo de loops son dominantes en la zona proxima al ecuador duranto un mínimo de actividad solar \citep{nuevo_2013}.
+%Este anális muestra un gran avance en la capacidad del modelo para reproducir la termodinámica de la baja corona. De todas formas un enfoque diferente en la conversión de modos de Alfvén en la región de transición podría generar arcos con temperaturas decrecientes. Este tipo de arcos son dominantes en la zona proxima al ecuador duranto un mínimo de actividad solar \citep{nuevo_2013}.
 
-Próximamente se publicará una comparación mas extensa y detallada utilizando subregiones cuidadosamente seleccionadas y se incluirá una comparación de flujo de energía entrante.
+El análisis presentado en este trabajo muestra un  avance en la capacidad del modelo AWSoM para reproducir la termodinámica de la baja corona descripta por la técnica DEMT. Sin embargo, el modelo no logra reproducir arcos con temperaturas decrecientes, que son dominantes en la zona próxima al ecuador durante el mínimo de actividad solar \citep{nuevo_2013}.  La incorporación de la conversión de modos de Alfvén en modos compresibles podría permitir que el modelo reproduzca estas estructuras \citep{schiff_2016}.
 
+Próximamente se publicará una comparación más extensa y detallada de las cantidades termodinámicas y energéticas derivadas de DEMT y el modelo AWSoM para estas dos rotaciones considerando subregiones del streamer y los agujeros coronales.
 
 %\begin{acknowledgement}
 %\texttt{Al Mate Misionero}
