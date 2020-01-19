@@ -1,0 +1,49 @@
+Estimado/a D.G. Lloveras,
+
+A continuación, le envío el reporte arbitral de su manuscrito titulado "Estudio de validación tomográfica del modelo MHD AWSoM". ID 509_v1. La recomendación del árbitro es realizar "cambios menores" previo a la eventual aceptación de su artículo. 
+
+Le solicitamos que envíe una nueva versión de su artículo teniendo en cuenta los comentarios del arbitraje y editoriales. No dude en consultarnos por cualquier inquietud.
+
+Los cambios al texto deben ser resaltados (e.g. en color o negrita) para asistir y facilitar el trabajo de los árbitros y editores. La versión revisada debe ser subida a SiGMa, junto con la respuesta al evaluador y, opcionalmente, a los editores.
+
+Algunos comentarios editoriales:
+
+-Incrementar el tamaño de la fuente en la Fig. 1 hasta hacer legibles los superíndices en una versión impresa.
+-El idioma de las figuras debe ser el mismo que el del texto principal.
+
+Quedamos a la espera de su artículo revisado. Ante cualquier inquietud dirija un correo electrónico al editor (editor.baaa@gmail.com) indicando en el asunto el ID de su artículo (e.g. asunto: "Consulta por artículo ID XXX"). 
+
+
+Atentamente,
+
+
+Dr.-Ing. Francisco A. Iglesias
+Editor BAAA Vol. 61B
+
+------------------------------------------------------------------------------------------
+REPORTE:
+
+El artículo titulado "Estudio de validación tomográfica del modelo MHD AWSoM" busca validar el modelo coronal MHD AWSoM mediante una técnica tomográfica de medida de emisión diferencial (DEMT) en 3D. Los autores realizan una comparación cuantitativa y cualitativa de parámetros de interés (Te y Ne) obtenidos con el modelo MHD y la técnica DEMT para dos rotaciones Carrington transcurridas durante épocas de baja actividad solar.  
+El artículo es original, y posee una redacción clara y un objetivo científico interesante. Considero que el artículo debe ser aceptado para su publicación en el BAAA, luego de algunas correcciones menores que sugiero realizar.
+
+Introducción:
+1) A medida que el modelo es mejorado es necesario
+contrastar los resultados con observaciones
+- Sugerencia: A medida que el modelo es actualizado/modificado es necesario
+contrastar los resultados con observaciones
+
+2)  En este artículo breve presentamos primeros
+resultados..
+- Sugerencia: En este artículo breve presentamos los primeros
+resultados..
+
+Sección 2:
+3) ..una serie temporal de imágenes EUV cubriendo..
+- Falta definir EUV
+
+4) Indicar los filtros de EUVI y AIA utilizados para la reconstrucción DEMT
+
+5) Agregar referencias bibliográficas de los instrumentos utilizados (EUVI; AIA)
+
+Figuras:
+6) Recomendaría rehacer la Figura 1 en idioma español para mantener la coherencia con el resto del artículo.  
